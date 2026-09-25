@@ -4,7 +4,7 @@
   </div>
   <ul class="category-grid__list category-grid__list--3" role="list">
     {%- for collection in collections -%}
-      {%- if collection.products_count > 0 -%}
+      {%- if collection.products_count > 0 and collection.handle != 'frontpage' -%}
         {%- assign image = collection.featured_image | default: collection.image -%}
         <li class="category-card">
           <a href="{{ collection.url }}" class="category-card__link">

@@ -32,7 +32,7 @@ tools/       brand artwork generator, product catalog data, local preview (not p
 
 **Option A — connect GitHub (recommended):** Shopify admin → *Online Store → Themes → Add theme → Connect from GitHub*, pick this repository and branch. Every push updates the theme.
 
-**Option B — upload a zip:** zip the theme folders (`assets config layout locales sections snippets templates`) and upload it in *Online Store → Themes → Add theme → Upload zip file*.
+**Option B — upload a zip:** download [`dist/crusader-theme.zip`](dist/crusader-theme.zip) and upload it in *Online Store → Themes → Add theme → Upload zip file*. Rebuild it after changes by zipping the theme folders (`assets config layout locales sections snippets templates`) at the zip's root.
 
 Then *Customize* the theme to swap in your own photos, logo and text.
 
