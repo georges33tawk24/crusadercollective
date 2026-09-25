@@ -1,0 +1,31 @@
+{%- comment -%}
+  Renders a price that the USD / LBP toggle can convert.
+  - product: product object (uses selected or first available variant)
+  - variant: optional variant object
+  - class: optional extra class
+{%- endcomment -%}
+{%- liquid
+  assign target = variant | default: product.selected_or_first_available_variant
+  assign price = target.price
+  assign compare_at = target.compare_at_price
+  assign on_sale = false
+  if compare_at > price
+    assign on_sale = true
+  endif
+  if variant == blank and product.price_varies
+    assign price = product.price_min
+  endif
+-%}
+<div class="price{% if on_sale %} price--sale{% endif %}{% if class %} {{ class }}{% endif %}" data-price>
+  {%- if variant == blank and product.price_varies -%}
+    <span class="price__from">{{ 'products.product.from' | t }}</span>
+  {%- endif -%}
+  <span class="price__current">
+    <span class="visually-hidden">{% if on_sale %}{{ 'products.product.sale_price' | t }}{% else %}{{ 'products.product.regular_price' | t }}{% endif %}</span>
+    <span class="money" data-money="{{ price }}" data-price-current>{{ price | money }}</span>
+  </span>
+  <s class="price__compare"{% unless on_sale %} hidden{% endunless %}>
+    <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
+    <span class="money" data-money="{{ compare_at }}" data-price-compare>{{ compare_at | money }}</span>
+  </s>
+</div>

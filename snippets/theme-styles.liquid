@@ -1,0 +1,50 @@
+{%- liquid
+  assign heading_font = settings.type_heading_font
+  assign heading_heavy = heading_font | font_modify: 'weight', '900'
+  if heading_heavy == nil
+    assign heading_heavy = heading_font | font_modify: 'weight', '800'
+  endif
+  if heading_heavy == nil
+    assign heading_heavy = heading_font | font_modify: 'weight', 'bolder'
+  endif
+  if heading_heavy == nil
+    assign heading_heavy = heading_font
+  endif
+
+  assign body_font = settings.type_body_font
+  assign body_medium = body_font | font_modify: 'weight', '500'
+  assign body_bold = body_font | font_modify: 'weight', 'bold'
+  assign body_heavy = body_font | font_modify: 'weight', '800'
+  assign body_italic = body_font | font_modify: 'style', 'italic'
+-%}
+
+{{ heading_heavy | font_url | preload_tag: as: 'font', type: 'font/woff2', crossorigin: true }}
+{{ body_font | font_url | preload_tag: as: 'font', type: 'font/woff2', crossorigin: true }}
+
+<style>
+  {{ heading_heavy | font_face: font_display: 'swap' }}
+  {{ body_font | font_face: font_display: 'swap' }}
+  {{ body_medium | font_face: font_display: 'swap' }}
+  {{ body_bold | font_face: font_display: 'swap' }}
+  {{ body_heavy | font_face: font_display: 'swap' }}
+  {{ body_italic | font_face: font_display: 'swap' }}
+
+  :root {
+    --font-heading: {{ heading_heavy.family }}, {{ heading_heavy.fallback_families }};
+    --font-heading-weight: {{ heading_heavy.weight }};
+    --font-body: {{ body_font.family }}, {{ body_font.fallback_families }};
+    --font-body-weight: {{ body_font.weight }};
+    --font-body-bold: {% if body_heavy %}{{ body_heavy.weight }}{% elsif body_bold %}{{ body_bold.weight }}{% else %}700{% endif %};
+    --heading-scale: {{ settings.heading_scale | divided_by: 100.0 }};
+
+    --color-bg: {{ settings.color_background }};
+    --color-text: {{ settings.color_text }};
+    --color-muted: {{ settings.color_muted }};
+    --color-surface: {{ settings.color_surface }};
+    --color-sale: {{ settings.color_sale }};
+    --color-line: {{ settings.color_text | color_modify: 'alpha', 0.12 }};
+    --color-line-strong: {{ settings.color_text | color_modify: 'alpha', 0.3 }};
+
+    --logo-size: {{ settings.logo_size }}px;
+  }
+</style>

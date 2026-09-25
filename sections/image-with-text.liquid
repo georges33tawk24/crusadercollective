@@ -1,0 +1,109 @@
+<section class="section image-with-text color-{{ section.settings.color_scheme }}">
+  <div class="page-width">
+    <div class="image-with-text__grid image-with-text__grid--{{ section.settings.layout }}">
+      <div class="image-with-text__media">
+        {%- if section.settings.image != blank -%}
+          {{
+            section.settings.image
+            | image_url: width: 1600
+            | image_tag:
+              class: 'image-with-text__image',
+              widths: '550, 800, 1100, 1600',
+              sizes: '(min-width: 750px) 50vw, 100vw',
+              loading: 'lazy'
+          }}
+        {%- else -%}
+          <div class="image-with-text__emblem">{% render 'logo-mark' %}</div>
+        {%- endif -%}
+      </div>
+      <div class="image-with-text__content">
+        {%- if section.settings.eyebrow != blank -%}
+          <p class="eyebrow">{{ section.settings.eyebrow }}</p>
+        {%- endif -%}
+        {%- if section.settings.heading != blank -%}
+          <h2 class="h1">{{ section.settings.heading }}</h2>
+        {%- endif -%}
+        {%- if section.settings.text != blank -%}
+          <div class="rte">{{ section.settings.text }}</div>
+        {%- endif -%}
+        {%- if section.settings.button_label != blank -%}
+          <a
+            href="{{ section.settings.button_link | default: routes.all_products_collection_url }}"
+            class="button {% if section.settings.color_scheme == 'inverse' %}button--light{% else %}button--dark{% endif %}"
+          >
+            {{- section.settings.button_label -}}
+          </a>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Image with text",
+  "class": "section-image-with-text",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "Leave empty to show the cross emblem."
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Image position",
+      "options": [
+        { "value": "image-first", "label": "Left" },
+        { "value": "text-first", "label": "Right" }
+      ],
+      "default": "image-first"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Small text above heading",
+      "default": "Our mission"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "More than a brand"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Tell your story here: why you started, what you stand for, and who you make it for.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Our story"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Colors",
+      "options": [
+        { "value": "default", "label": "Light" },
+        { "value": "inverse", "label": "Dark" }
+      ],
+      "default": "inverse"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image with text"
+    }
+  ]
+}
+{% endschema %}

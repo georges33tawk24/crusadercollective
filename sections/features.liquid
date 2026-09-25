@@ -1,0 +1,79 @@
+<section class="section section--compact features color-{{ section.settings.color_scheme }}">
+  <div class="page-width">
+    <ul class="features__list" role="list">
+      {%- for block in section.blocks -%}
+        <li class="features__item" {{ block.shopify_attributes }}>
+          <span class="features__icon">{% render 'icon', name: block.settings.icon %}</span>
+          <div>
+            <h3 class="features__title">{{ block.settings.title }}</h3>
+            {%- if block.settings.text != blank -%}
+              <p class="features__text">{{ block.settings.text }}</p>
+            {%- endif -%}
+          </div>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Highlights",
+  "class": "section-features",
+  "max_blocks": 4,
+  "settings": [
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Colors",
+      "options": [
+        { "value": "default", "label": "Light" },
+        { "value": "inverse", "label": "Dark" }
+      ],
+      "default": "default"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Highlight",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "truck", "label": "Delivery" },
+            { "value": "return", "label": "Returns" },
+            { "value": "shield", "label": "Shield" },
+            { "value": "fabric", "label": "Fabric" },
+            { "value": "check", "label": "Check" }
+          ],
+          "default": "truck"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Highlight"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Highlights",
+      "blocks": [
+        { "type": "feature" },
+        { "type": "feature" },
+        { "type": "feature" }
+      ]
+    }
+  ]
+}
+{% endschema %}

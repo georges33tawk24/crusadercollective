@@ -1,0 +1,6 @@
+{%- if settings.currency_toggle_enabled -%}
+  <div class="currency-toggle" role="group" aria-label="{{ 'general.currency.label' | t }}" data-currency-toggle>
+    <button type="button" class="currency-toggle__option" data-currency="USD" aria-pressed="false">USD</button>
+    <button type="button" class="currency-toggle__option" data-currency="LBP" aria-pressed="false">LBP</button>
+  </div>
+{%- endif -%}

@@ -1,0 +1,100 @@
+{%- comment -%}
+  Product card used in grids.
+  - product: product object
+  - lazy: false for above-the-fold cards (default true)
+  - sizes: image sizes attribute
+{%- endcomment -%}
+{%- liquid
+  assign loading = 'lazy'
+  if lazy == false
+    assign loading = 'eager'
+  endif
+  assign image_sizes = sizes | default: '(min-width: 990px) 25vw, (min-width: 750px) 33vw, 50vw'
+  assign first_image = product.featured_media.preview_image
+  assign second_image = product.media[1].preview_image
+  assign variant = product.selected_or_first_available_variant
+
+  assign quick_add = false
+  if settings.card_quick_add and product.available
+    if product.has_only_default_variant
+      assign quick_add = 'single'
+    elsif product.options.size == 1 and product.variants.size <= 8
+      assign quick_add = 'options'
+    endif
+  endif
+-%}
+
+<div class="product-card{% unless product.available %} product-card--sold-out{% endunless %}">
+  <div class="product-card__media-wrap">
+  <a href="{{ product.url }}" class="product-card__media" tabindex="-1" aria-hidden="true">
+    {%- if first_image -%}
+      {{
+        first_image
+        | image_url: width: 1000
+        | image_tag:
+          class: 'product-card__image',
+          widths: '300, 450, 600, 800, 1000',
+          sizes: image_sizes,
+          loading: loading,
+          alt: ''
+      }}
+      {%- if settings.card_show_second_image and second_image -%}
+        {{
+          second_image
+          | image_url: width: 1000
+          | image_tag:
+            class: 'product-card__image product-card__image--hover',
+            widths: '300, 450, 600, 800, 1000',
+            sizes: image_sizes,
+            loading: 'lazy',
+            alt: ''
+        }}
+      {%- endif -%}
+    {%- else -%}
+      {{ 'product-1' | placeholder_svg_tag: 'product-card__placeholder' }}
+    {%- endif -%}
+  </a>
+
+  {%- if product.available == false -%}
+    <span class="badge badge--sold-out">{{ 'products.product.sold_out' | t }}</span>
+  {%- elsif product.compare_at_price > product.price -%}
+    <span class="badge badge--sale">{{ 'products.product.on_sale' | t }}</span>
+  {%- endif -%}
+
+  {%- if quick_add == 'single' -%}
+    <button
+      type="button"
+      class="product-card__quick-add"
+      data-quick-add="{{ variant.id }}"
+      aria-label="{{ 'products.product.add_to_cart' | t }}: {{ product.title | escape }}"
+    >
+      {% render 'icon', name: 'plus' %}
+      <span>{{ 'products.product.quick_add' | t }}</span>
+    </button>
+  {%- elsif quick_add == 'options' -%}
+    <div class="product-card__sizes" role="group" aria-label="{{ 'products.product.quick_add' | t }}: {{ product.title | escape }}">
+      <span class="product-card__sizes-label">{{ 'products.product.quick_add' | t }}</span>
+      <div class="product-card__sizes-list">
+        {%- for v in product.variants -%}
+          <button
+            type="button"
+            class="product-card__size"
+            data-quick-add="{{ v.id }}"
+            {% unless v.available %}disabled{% endunless %}
+            aria-label="{{ 'products.product.add_to_cart' | t }}: {{ product.title | escape }} – {{ v.title | escape }}"
+          >
+            {{- v.title -}}
+          </button>
+        {%- endfor -%}
+      </div>
+    </div>
+  {%- endif -%}
+  </div>
+
+  <div class="product-card__info">
+    <h3 class="product-card__title">
+      <a href="{{ product.url }}" class="product-card__link">{{ product.title }}</a>
+    </h3>
+    {% render 'price', product: product %}
+  </div>
+</div>

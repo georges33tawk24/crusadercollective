@@ -1,0 +1,54 @@
+<section class="marquee color-{{ section.settings.color_scheme }}" aria-label="{{ section.settings.text | escape }}">
+  <div class="marquee__track" style="--marquee-speed: {{ section.settings.speed }}s;">
+    {%- assign words = section.settings.text | split: '|' -%}
+    {%- for i in (1..4) -%}
+      <div class="marquee__group"{% if i > 1 %} aria-hidden="true"{% endif %}>
+        {%- for word in words -%}
+          <span class="marquee__item">{{ word | strip }}</span>
+          <span class="marquee__sep" aria-hidden="true">✚</span>
+        {%- endfor -%}
+      </div>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Scrolling text",
+  "class": "section-marquee",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "info": "Separate phrases with |",
+      "default": "Faith over fear | Ora et labora | Stand firm | Pray & work"
+    },
+    {
+      "type": "range",
+      "id": "speed",
+      "label": "Loop duration",
+      "min": 10,
+      "max": 80,
+      "step": 5,
+      "unit": "s",
+      "default": 35
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Colors",
+      "options": [
+        { "value": "default", "label": "Light" },
+        { "value": "inverse", "label": "Dark" }
+      ],
+      "default": "inverse"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Scrolling text"
+    }
+  ]
+}
+{% endschema %}

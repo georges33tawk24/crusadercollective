@@ -1,0 +1,22 @@
+<article class="section page-width page-width--narrow article">
+  <p class="eyebrow">{{ article.published_at | time_tag: format: 'date' }}</p>
+  <h1 class="display article__title">{{ article.title }}</h1>
+  {%- if article.image -%}
+    <div class="article__media">
+      {{ article.image | image_url: width: 1800 | image_tag: widths: '600, 900, 1200, 1800', sizes: '(min-width: 990px) 900px, 100vw', loading: 'eager', alt: article.image.alt }}
+    </div>
+  {%- endif -%}
+  <div class="rte article__content">{{ article.content }}</div>
+  <a href="{{ blog.url }}" class="link-arrow">
+    {{- 'blogs.article.back' | t: title: blog.title -}}
+    {% render 'icon', name: 'arrow' %}
+  </a>
+</article>
+
+{% schema %}
+{
+  "name": "Blog post",
+  "class": "section-main-article",
+  "settings": []
+}
+{% endschema %}

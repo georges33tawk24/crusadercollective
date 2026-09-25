@@ -1,0 +1,34 @@
+{
+  "type": "footer",
+  "name": "Footer group",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "menu-shop": {
+          "type": "menu",
+          "settings": { "title": "Shop", "menu": "main-menu" }
+        },
+        "menu-help": {
+          "type": "menu",
+          "settings": { "title": "Help", "menu": "footer" }
+        },
+        "newsletter": {
+          "type": "newsletter",
+          "settings": {
+            "title": "Join the collective",
+            "text": "Early access to new drops. No spam."
+          }
+        }
+      },
+      "block_order": ["menu-shop", "menu-help", "newsletter"],
+      "settings": {
+        "heading": "Wear your faith boldly.",
+        "text": "<p>Streetwear for believers. Designed in black and white.</p>",
+        "show_policies": true,
+        "show_payment_icons": true
+      }
+    }
+  },
+  "order": ["footer"]
+}

@@ -1,0 +1,87 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "overlay": 40,
+        "height": "full",
+        "alignment": "center",
+        "eyebrow": "Crusader Collective",
+        "heading": "Armor for the faithful",
+        "text": "Heavyweight streetwear in black and white.",
+        "button_label": "Shop the drop",
+        "button_link": "shopify://collections/all",
+        "button_label_2": "",
+        "show_scroll_hint": true
+      }
+    },
+    "categories": {
+      "type": "category-grid",
+      "blocks": {
+        "hoodies": { "type": "category", "settings": { "collection": "hoodies", "title": "Hoodies" } },
+        "tees": { "type": "category", "settings": { "collection": "t-shirts", "title": "T-Shirts" } },
+        "caps": { "type": "category", "settings": { "collection": "caps", "title": "Caps" } },
+        "hats": { "type": "category", "settings": { "collection": "hats", "title": "Hats" } },
+        "mugs": { "type": "category", "settings": { "collection": "mugs", "title": "Mugs" } }
+      },
+      "block_order": ["hoodies", "tees", "caps", "hats", "mugs"],
+      "settings": {
+        "heading": "Shop by category",
+        "link_label": "View all",
+        "link": "shopify://collections/all",
+        "color_scheme": "default"
+      }
+    },
+    "marquee": {
+      "type": "marquee",
+      "settings": {
+        "text": "Faith over fear | Ora et labora | Stand firm | Pray & work",
+        "speed": 35,
+        "color_scheme": "inverse"
+      }
+    },
+    "featured": {
+      "type": "featured-collection",
+      "settings": {
+        "heading": "Latest drop",
+        "collection": "new-arrivals",
+        "products_to_show": 8,
+        "columns": "4",
+        "mobile_scroll": true,
+        "show_view_all": true,
+        "color_scheme": "default"
+      }
+    },
+    "story": {
+      "type": "image-with-text",
+      "settings": {
+        "layout": "image-first",
+        "eyebrow": "Our mission",
+        "heading": "More than a brand",
+        "text": "<p>Crusader Collective makes streetwear for believers who wear their faith with conviction. Every piece is designed in black and white: bold, simple, and built to last.</p>",
+        "button_label": "Our story",
+        "button_link": "shopify://pages/about",
+        "color_scheme": "inverse"
+      }
+    },
+    "highlights": {
+      "type": "features",
+      "blocks": {
+        "fabric": { "type": "feature", "settings": { "icon": "fabric", "title": "Heavyweight fabrics", "text": "Thick, soft and made to hold their shape." } },
+        "delivery": { "type": "feature", "settings": { "icon": "truck", "title": "Delivery across Lebanon", "text": "Fast shipping to your door." } },
+        "returns": { "type": "feature", "settings": { "icon": "return", "title": "Easy exchanges", "text": "Wrong size? We'll sort it out." } }
+      },
+      "block_order": ["fabric", "delivery", "returns"],
+      "settings": { "color_scheme": "default" }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "heading": "Join the collective",
+        "text": "<p>Be first to know about new drops and restocks.</p>",
+        "color_scheme": "default"
+      }
+    }
+  },
+  "order": ["hero", "categories", "marquee", "featured", "story", "highlights", "newsletter"]
+}

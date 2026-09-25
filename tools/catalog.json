@@ -1,0 +1,143 @@
+{
+  "usd_lbp_rate": 89500,
+  "collections": [
+    { "handle": "hoodies", "title": "Hoodies", "product_type": "Hoodie", "image": "in-hoc-signo-hoodie-back", "description": "Heavyweight hoodies with bold faith-inspired prints." },
+    { "handle": "t-shirts", "title": "T-Shirts", "product_type": "T-Shirt", "image": "ora-et-labora-tee-back", "description": "Oversized tees in black and white." },
+    { "handle": "caps", "title": "Caps", "product_type": "Cap", "image": "emblem-dad-cap", "description": "Embroidered caps, one size fits most." },
+    { "handle": "hats", "title": "Hats", "product_type": "Hat", "image": "ora-et-labora-bucket-hat", "description": "Beanies and bucket hats." },
+    { "handle": "mugs", "title": "Mugs", "product_type": "Mug", "image": "ora-et-labora-mug", "description": "Ceramic mugs for the morning prayer and the coffee that follows." },
+    { "handle": "new-arrivals", "title": "New Arrivals", "tag": "new-arrival", "image": "armor-of-god-hoodie-back", "description": "The latest drop." }
+  ],
+  "products": [
+    {
+      "handle": "in-hoc-signo-hoodie",
+      "title": "In Hoc Signo Hoodie",
+      "type": "Hoodie",
+      "usd": 55,
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "images": ["in-hoc-signo-hoodie-back", "in-hoc-signo-hoodie-front"],
+      "tags": ["new-arrival", "black"],
+      "description": "<p>Black hoodie with a large Chi-Rho back print framed by the words <em>In hoc signo vinces</em>: \"in this sign, conquer.\" Small cross emblem on the chest.</p><ul><li>Relaxed, boxy fit</li><li>Kangaroo pocket and drawcord hood</li><li>Screen-printed in white</li></ul>"
+    },
+    {
+      "handle": "armor-of-god-hoodie",
+      "title": "Armor of God Hoodie",
+      "type": "Hoodie",
+      "usd": 55,
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "images": ["armor-of-god-hoodie-back", "armor-of-god-hoodie-front"],
+      "tags": ["new-arrival", "white"],
+      "description": "<p>White hoodie with a shield and Jerusalem cross back print inspired by Ephesians 6:11. Cross emblem on the chest.</p><ul><li>Relaxed, boxy fit</li><li>Kangaroo pocket and drawcord hood</li><li>Screen-printed in black</li></ul>"
+    },
+    {
+      "handle": "collective-emblem-hoodie",
+      "title": "Collective Emblem Hoodie",
+      "type": "Hoodie",
+      "usd": 50,
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "images": ["emblem-hoodie-front"],
+      "tags": ["black"],
+      "description": "<p>The Crusader Collective badge, printed big on the front of a black hoodie.</p><ul><li>Relaxed, boxy fit</li><li>Kangaroo pocket and drawcord hood</li></ul>"
+    },
+    {
+      "handle": "ora-et-labora-tee",
+      "title": "Ora et Labora Tee",
+      "type": "T-Shirt",
+      "usd": 30,
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "images": ["ora-et-labora-tee-back", "ora-et-labora-tee-front"],
+      "tags": ["new-arrival", "black"],
+      "description": "<p><em>Ora et labora</em>, \"pray and work\", set in blackletter across the back of a black oversized tee. Cross emblem on the chest.</p><ul><li>Oversized fit, dropped shoulders</li><li>Screen-printed in white</li></ul>"
+    },
+    {
+      "handle": "faith-over-fear-tee",
+      "title": "Faith Over Fear Tee",
+      "type": "T-Shirt",
+      "usd": 28,
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "images": ["faith-over-fear-tee-front"],
+      "tags": ["new-arrival", "white"],
+      "description": "<p>Three words, stacked heavy. White tee with a bold black front print and a Hebrews 13:6 reference.</p><ul><li>Oversized fit, dropped shoulders</li><li>Screen-printed in black</li></ul>"
+    },
+    {
+      "handle": "kyrie-eleison-tee",
+      "title": "Kyrie Eleison Tee",
+      "type": "T-Shirt",
+      "usd": 30,
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "images": ["kyrie-eleison-tee-front"],
+      "tags": ["new-arrival", "black"],
+      "description": "<p><em>Kyrie eleison</em>, \"Lord, have mercy\", one of the oldest prayers of the Church, in carved Roman capitals on a black tee.</p><ul><li>Oversized fit, dropped shoulders</li><li>Screen-printed in white</li></ul>"
+    },
+    {
+      "handle": "jerusalem-cross-tee",
+      "title": "Jerusalem Cross Tee",
+      "type": "T-Shirt",
+      "usd": 28,
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "images": ["jerusalem-cross-tee-front"],
+      "tags": ["white"],
+      "description": "<p>The Jerusalem cross above the Crusader Collective wordmark, printed in black on a white tee.</p><ul><li>Oversized fit, dropped shoulders</li><li>Screen-printed in black</li></ul>"
+    },
+    {
+      "handle": "emblem-dad-cap",
+      "title": "Emblem Dad Cap",
+      "type": "Cap",
+      "usd": 25,
+      "sizes": [],
+      "images": ["emblem-dad-cap"],
+      "tags": ["new-arrival", "black"],
+      "description": "<p>Black six-panel cap with the round cross emblem embroidered on the front.</p><ul><li>Curved brim</li><li>Adjustable strap, one size fits most</li></ul>"
+    },
+    {
+      "handle": "chi-rho-cap",
+      "title": "Chi-Rho Cap",
+      "type": "Cap",
+      "usd": 25,
+      "sizes": [],
+      "images": ["chi-rho-cap"],
+      "tags": ["white"],
+      "description": "<p>White six-panel cap with a black Chi-Rho embroidered on the front.</p><ul><li>Curved brim</li><li>Adjustable strap, one size fits most</li></ul>"
+    },
+    {
+      "handle": "collective-beanie",
+      "title": "Collective Beanie",
+      "type": "Hat",
+      "usd": 22,
+      "sizes": [],
+      "images": ["collective-beanie"],
+      "tags": ["black"],
+      "description": "<p>Black rib-knit beanie with a woven emblem label on the cuff.</p><ul><li>Fold-over cuff</li><li>One size</li></ul>"
+    },
+    {
+      "handle": "ora-et-labora-bucket-hat",
+      "title": "Ora et Labora Bucket Hat",
+      "type": "Hat",
+      "usd": 28,
+      "sizes": ["S/M", "L/XL"],
+      "images": ["ora-et-labora-bucket-hat"],
+      "tags": ["new-arrival", "black"],
+      "description": "<p>Black bucket hat with <em>Ora et labora</em> embroidered on the front.</p>"
+    },
+    {
+      "handle": "ora-et-labora-mug",
+      "title": "Ora et Labora Mug",
+      "type": "Mug",
+      "usd": 16,
+      "sizes": [],
+      "images": ["ora-et-labora-mug"],
+      "tags": ["new-arrival", "white"],
+      "description": "<p>White ceramic mug printed with <em>Ora et labora</em> in blackletter. Pray first, then coffee.</p>"
+    },
+    {
+      "handle": "emblem-mug",
+      "title": "Emblem Mug",
+      "type": "Mug",
+      "usd": 16,
+      "sizes": [],
+      "images": ["emblem-mug"],
+      "tags": ["black"],
+      "description": "<p>Black ceramic mug with the Crusader Collective badge in white.</p>"
+    }
+  ]
+}

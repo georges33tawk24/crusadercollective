@@ -1,0 +1,46 @@
+{
+  "current": {
+    "logo_size": 56,
+    "color_background": "#ffffff",
+    "color_text": "#0a0a0a",
+    "color_muted": "#6b6b6b",
+    "color_surface": "#ececea",
+    "color_sale": "#b3261e",
+    "type_heading_font": "inter_n7",
+    "type_body_font": "inter_n4",
+    "heading_scale": 100,
+    "currency_toggle_enabled": true,
+    "usd_lbp_rate": 89500,
+    "currency_default": "USD",
+    "card_show_second_image": true,
+    "card_quick_add": true,
+    "cart_type": "drawer",
+    "cart_show_note": false,
+    "free_shipping_threshold": 0,
+    "social_instagram": "https://www.instagram.com/crusadercollective.lb",
+    "social_tiktok": "",
+    "social_facebook": "",
+    "social_whatsapp": ""
+  },
+  "presets": {
+    "Default": {
+      "logo_size": 56,
+      "color_background": "#ffffff",
+      "color_text": "#0a0a0a",
+      "color_muted": "#6b6b6b",
+      "color_surface": "#ececea",
+      "color_sale": "#b3261e",
+      "type_heading_font": "inter_n7",
+      "type_body_font": "inter_n4",
+      "heading_scale": 100,
+      "currency_toggle_enabled": true,
+      "usd_lbp_rate": 89500,
+      "currency_default": "USD",
+      "card_show_second_image": true,
+      "card_quick_add": true,
+      "cart_type": "drawer",
+      "cart_show_note": false,
+      "free_shipping_threshold": 0
+    }
+  }
+}

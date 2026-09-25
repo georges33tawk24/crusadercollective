@@ -1,0 +1,64 @@
+{%- comment -%}
+  Subtotal, notes and checkout button for cart drawer and cart page.
+  - context: 'drawer' or 'page'
+{%- endcomment -%}
+{%- liquid
+  assign threshold = settings.free_shipping_threshold | times: 100
+  assign remaining = threshold | minus: cart.total_price
+  assign progress = 100
+  if threshold > 0 and remaining > 0
+    assign progress = cart.total_price | times: 100 | divided_by: threshold
+  endif
+-%}
+<div class="cart-summary">
+  {%- if threshold > 0 -%}
+    <div class="shipping-bar">
+      <p class="shipping-bar__text">
+        {%- if remaining > 0 -%}
+          {%- assign remaining_money = remaining | money -%}
+          {{ 'cart.general.free_shipping_remaining_html' | t: amount: remaining_money, cents: remaining }}
+        {%- else -%}
+          {{ 'cart.general.free_shipping_unlocked' | t }}
+        {%- endif -%}
+      </p>
+      <div class="shipping-bar__track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{ progress }}">
+        <span class="shipping-bar__fill" style="width: {{ progress }}%"></span>
+      </div>
+    </div>
+  {%- endif -%}
+
+  {%- for discount in cart.cart_level_discount_applications -%}
+    <p class="cart-summary__row cart-summary__discount">
+      <span>{{ discount.title }}</span>
+      <span>-<span class="money" data-money="{{ discount.total_allocated_amount }}">{{ discount.total_allocated_amount | money }}</span></span>
+    </p>
+  {%- endfor -%}
+
+  <p class="cart-summary__row cart-summary__total">
+    <span>{{ 'cart.general.subtotal' | t }}</span>
+    <span class="money" data-money="{{ cart.total_price }}">{{ cart.total_price | money }}</span>
+  </p>
+  <p class="cart-summary__note">
+    {%- if cart.taxes_included -%}{{ 'cart.general.taxes_included_shipping_at_checkout' | t }}{%- else -%}{{ 'cart.general.taxes_and_shipping_at_checkout' | t }}{%- endif -%}
+    {%- if settings.currency_toggle_enabled -%}
+      <span class="cart-summary__currency" data-currency-note hidden>
+        {{ 'cart.general.charged_in' | t: currency: cart.currency.iso_code }}
+      </span>
+    {%- endif -%}
+  </p>
+
+  {%- if settings.cart_show_note -%}
+    <details class="cart-summary__order-note">
+      <summary class="link-underline">{{ 'cart.general.note' | t }}</summary>
+      <label class="visually-hidden" for="CartNote-{{ context }}">{{ 'cart.general.note' | t }}</label>
+      <textarea id="CartNote-{{ context }}" name="note" form="CartForm-{{ context }}" data-cart-note>{{ cart.note }}</textarea>
+    </details>
+  {%- endif -%}
+
+  <button type="submit" name="checkout" form="CartForm-{{ context }}" class="button button--dark button--full cart-summary__checkout">
+    {{ 'cart.general.checkout' | t }}
+  </button>
+  {%- if additional_checkout_buttons and context == 'page' -%}
+    <div class="cart-summary__additional">{{ content_for_additional_checkout_buttons }}</div>
+  {%- endif -%}
+</div>

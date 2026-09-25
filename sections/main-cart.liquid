@@ -1,0 +1,38 @@
+<section class="cart-page page-width section" data-cart-page>
+  <div class="section-heading">
+    <h1 class="section-heading__title display">{{ 'cart.general.title' | t }}</h1>
+    {%- if cart.item_count > 0 -%}
+      <a class="link-arrow" href="{{ routes.all_products_collection_url }}">
+        {{- 'cart.general.continue_shopping' | t -}}
+        {% render 'icon', name: 'arrow' %}
+      </a>
+    {%- endif -%}
+  </div>
+
+  {%- if cart.item_count > 0 -%}
+    <div class="cart-page__grid">
+      <form action="{{ routes.cart_url }}" method="post" id="CartForm-page" class="cart-page__items" novalidate>
+        {% render 'cart-items', context: 'page' %}
+        <noscript>
+          <button type="submit" class="button button--dark button--small" name="update">{{ 'cart.general.update' | t }}</button>
+        </noscript>
+      </form>
+      <aside class="cart-page__summary">
+        {% render 'cart-summary', context: 'page' %}
+      </aside>
+    </div>
+  {%- else -%}
+    <div class="empty-state">
+      <p class="h2">{{ 'cart.general.empty' | t }}</p>
+      <a href="{{ routes.all_products_collection_url }}" class="button button--dark">{{ 'cart.general.continue_shopping' | t }}</a>
+    </div>
+  {%- endif -%}
+</section>
+
+{% schema %}
+{
+  "name": "Cart",
+  "class": "section-main-cart",
+  "settings": []
+}
+{% endschema %}

@@ -1,0 +1,14 @@
+{
+  "name": "crusader-collective-tools",
+  "private": true,
+  "type": "module",
+  "description": "Brand art renderer and local theme preview for the Crusader Collective Shopify theme.",
+  "scripts": {
+    "brand": "node brand/render.mjs",
+    "preview": "node preview/preview.mjs"
+  },
+  "devDependencies": {
+    "liquidjs": "^10.21.0",
+    "playwright": "^1.55.0"
+  }
+}

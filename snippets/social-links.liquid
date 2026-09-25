@@ -1,0 +1,33 @@
+{%- if settings.social_instagram != blank or settings.social_tiktok != blank or settings.social_facebook != blank or settings.social_whatsapp != blank -%}
+  <ul class="social-links" role="list">
+    {%- if settings.social_instagram != blank -%}
+      <li>
+        <a href="{{ settings.social_instagram }}" target="_blank" rel="noopener" class="social-links__link">
+          {% render 'icon', name: 'instagram' %}<span class="visually-hidden">Instagram</span>
+        </a>
+      </li>
+    {%- endif -%}
+    {%- if settings.social_tiktok != blank -%}
+      <li>
+        <a href="{{ settings.social_tiktok }}" target="_blank" rel="noopener" class="social-links__link">
+          {% render 'icon', name: 'tiktok' %}<span class="visually-hidden">TikTok</span>
+        </a>
+      </li>
+    {%- endif -%}
+    {%- if settings.social_facebook != blank -%}
+      <li>
+        <a href="{{ settings.social_facebook }}" target="_blank" rel="noopener" class="social-links__link">
+          {% render 'icon', name: 'facebook' %}<span class="visually-hidden">Facebook</span>
+        </a>
+      </li>
+    {%- endif -%}
+    {%- if settings.social_whatsapp != blank -%}
+      {%- assign whatsapp_number = settings.social_whatsapp | remove: '+' | remove: ' ' | remove: '-' -%}
+      <li>
+        <a href="https://wa.me/{{ whatsapp_number }}" target="_blank" rel="noopener" class="social-links__link">
+          {% render 'icon', name: 'whatsapp' %}<span class="visually-hidden">WhatsApp</span>
+        </a>
+      </li>
+    {%- endif -%}
+  </ul>
+{%- endif -%}

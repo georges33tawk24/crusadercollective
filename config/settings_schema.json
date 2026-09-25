@@ -1,0 +1,208 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Crusader",
+    "theme_version": "1.0.0",
+    "theme_author": "Crusader Collective",
+    "theme_documentation_url": "https://github.com/georges33tawk24/crusadercollective",
+    "theme_support_url": "https://github.com/georges33tawk24/crusadercollective/issues"
+  },
+  {
+    "name": "Logo",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo image",
+        "info": "Round or square logos look best. Leave empty to use the built-in cross emblem."
+      },
+      {
+        "type": "range",
+        "id": "logo_size",
+        "label": "Logo size",
+        "min": 36,
+        "max": 96,
+        "step": 2,
+        "unit": "px",
+        "default": 56
+      },
+      {
+        "type": "image_picker",
+        "id": "favicon",
+        "label": "Favicon",
+        "info": "32 x 32px PNG. Leave empty to use the cross emblem."
+      }
+    ]
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "color",
+        "id": "color_background",
+        "label": "Background",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "color_text",
+        "label": "Text",
+        "default": "#0a0a0a"
+      },
+      {
+        "type": "color",
+        "id": "color_muted",
+        "label": "Secondary text",
+        "default": "#6b6b6b"
+      },
+      {
+        "type": "color",
+        "id": "color_surface",
+        "label": "Image background",
+        "info": "Shown behind product photos while they load.",
+        "default": "#ececea"
+      },
+      {
+        "type": "color",
+        "id": "color_sale",
+        "label": "Sale badge",
+        "default": "#b3261e"
+      }
+    ]
+  },
+  {
+    "name": "Typography",
+    "settings": [
+      {
+        "type": "font_picker",
+        "id": "type_heading_font",
+        "label": "Headings",
+        "info": "Headings are set in the heaviest weight available for this font.",
+        "default": "inter_n7"
+      },
+      {
+        "type": "font_picker",
+        "id": "type_body_font",
+        "label": "Body",
+        "default": "inter_n4"
+      },
+      {
+        "type": "range",
+        "id": "heading_scale",
+        "label": "Heading size",
+        "min": 80,
+        "max": 130,
+        "step": 5,
+        "unit": "%",
+        "default": 100
+      }
+    ]
+  },
+  {
+    "name": "Currency toggle",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Shows a USD / LBP switch in the header. Prices are converted in the browser for display only; customers are charged in your store currency at checkout."
+      },
+      {
+        "type": "checkbox",
+        "id": "currency_toggle_enabled",
+        "label": "Show USD / LBP toggle",
+        "default": true
+      },
+      {
+        "type": "number",
+        "id": "usd_lbp_rate",
+        "label": "Exchange rate (LBP per 1 USD)",
+        "default": 89500
+      },
+      {
+        "type": "select",
+        "id": "currency_default",
+        "label": "Currency shown first",
+        "options": [
+          { "value": "USD", "label": "USD" },
+          { "value": "LBP", "label": "LBP" }
+        ],
+        "default": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Product cards",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "card_show_second_image",
+        "label": "Show second image on hover",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "card_quick_add",
+        "label": "Enable quick add",
+        "info": "Lets shoppers pick a size and add to cart straight from the grid.",
+        "default": true
+      }
+    ]
+  },
+  {
+    "name": "Cart",
+    "settings": [
+      {
+        "type": "select",
+        "id": "cart_type",
+        "label": "Cart type",
+        "options": [
+          { "value": "drawer", "label": "Drawer" },
+          { "value": "page", "label": "Page" }
+        ],
+        "default": "drawer"
+      },
+      {
+        "type": "checkbox",
+        "id": "cart_show_note",
+        "label": "Enable order notes",
+        "default": false
+      },
+      {
+        "type": "number",
+        "id": "free_shipping_threshold",
+        "label": "Free shipping threshold",
+        "info": "In your store currency. Shows a progress bar in the cart. Set to 0 to hide.",
+        "default": 0
+      }
+    ]
+  },
+  {
+    "name": "Social media",
+    "settings": [
+      {
+        "type": "text",
+        "id": "social_instagram",
+        "label": "Instagram",
+        "placeholder": "https://instagram.com/yourbrand"
+      },
+      {
+        "type": "text",
+        "id": "social_tiktok",
+        "label": "TikTok",
+        "placeholder": "https://tiktok.com/@yourbrand"
+      },
+      {
+        "type": "text",
+        "id": "social_facebook",
+        "label": "Facebook",
+        "placeholder": "https://facebook.com/yourbrand"
+      },
+      {
+        "type": "text",
+        "id": "social_whatsapp",
+        "label": "WhatsApp number",
+        "info": "International format without + or spaces, for example 9613123456. Adds a floating chat button.",
+        "placeholder": "9613123456"
+      }
+    ]
+  }
+]

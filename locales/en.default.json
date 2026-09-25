@@ -1,0 +1,162 @@
+{
+  "accessibility": {
+    "skip_to_content": "Skip to content"
+  },
+  "general": {
+    "announcement": "Announcements",
+    "meta": {
+      "tags": "Tagged \"{{ tags }}\"",
+      "page": "Page {{ page }}"
+    },
+    "currency": {
+      "label": "Display currency"
+    },
+    "navigation": {
+      "main": "Main",
+      "menu": "Menu",
+      "open_menu": "Open menu",
+      "close_menu": "Close menu"
+    },
+    "search": {
+      "title": "Search",
+      "label": "Search the store",
+      "placeholder": "Search hoodies, tees, caps…",
+      "open": "Open search",
+      "close": "Close search",
+      "submit": "Search",
+      "products": "Products",
+      "view_all": "See all results for \"{{ terms }}\"",
+      "no_results": "Nothing found for \"{{ terms }}\". Try another word.",
+      "results_count": {
+        "one": "{{ count }} result for \"{{ terms }}\"",
+        "other": "{{ count }} results for \"{{ terms }}\""
+      }
+    },
+    "breadcrumbs": {
+      "label": "Breadcrumbs",
+      "home": "Home"
+    },
+    "pagination": {
+      "label": "Pagination",
+      "previous": "Previous page",
+      "next": "Next page",
+      "page": "Page {{ number }}"
+    },
+    "social": {
+      "whatsapp": "Chat with us on WhatsApp"
+    },
+    "password_page": {
+      "login_link": "Store owner? Enter with password",
+      "password": "Password",
+      "enter": "Enter"
+    }
+  },
+  "newsletter": {
+    "label": "Email address",
+    "button": "Subscribe",
+    "success": "You're in. Welcome to the collective."
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "Add to cart",
+      "added": "Added to cart",
+      "quick_add": "Quick add",
+      "sold_out": "Sold out",
+      "unavailable": "Unavailable",
+      "on_sale": "Sale",
+      "from": "From",
+      "regular_price": "Regular price",
+      "sale_price": "Sale price",
+      "quantity": "Quantity",
+      "quantity_decrease": "Decrease quantity",
+      "quantity_increase": "Increase quantity",
+      "size_guide": "Size guide",
+      "share": "Share",
+      "zoom": "Open image in full size",
+      "taxes_included": "Tax included. ",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout.",
+      "placeholder_title": "Your product"
+    }
+  },
+  "collections": {
+    "general": {
+      "title": "Collections",
+      "view_all": "View all",
+      "no_matches": "No products match these filters.",
+      "items": {
+        "one": "{{ count }} item",
+        "other": "{{ count }} items"
+      }
+    },
+    "filters": {
+      "apply": "Apply",
+      "clear_all": "Clear all",
+      "from": "From",
+      "to": "To"
+    },
+    "sorting": {
+      "title": "Sort by"
+    }
+  },
+  "cart": {
+    "general": {
+      "title": "Cart",
+      "close": "Close cart",
+      "checkout": "Check out",
+      "continue_shopping": "Continue shopping",
+      "empty": "Your cart is empty",
+      "remove": "Remove",
+      "update": "Update",
+      "subtotal": "Subtotal",
+      "note": "Add an order note",
+      "error": "Something went wrong. Please try again.",
+      "taxes_and_shipping_at_checkout": "Taxes and shipping calculated at checkout.",
+      "taxes_included_shipping_at_checkout": "Tax included. Shipping calculated at checkout.",
+      "charged_in": "You'll be charged in {{ currency }} at checkout.",
+      "free_shipping_remaining_html": "You're <span class=\"money\" data-money=\"{{ cents }}\">{{ amount }}</span> away from free shipping",
+      "free_shipping_unlocked": "You've unlocked free shipping",
+      "item_count": {
+        "one": "{{ count }} item",
+        "other": "{{ count }} items"
+      }
+    }
+  },
+  "customer": {
+    "log_in": "Log in",
+    "account": {
+      "title": "Account"
+    }
+  },
+  "contact": {
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone number",
+      "comment": "Message",
+      "send": "Send message",
+      "success": "Thanks for reaching out. We'll get back to you soon."
+    }
+  },
+  "blogs": {
+    "article": {
+      "back": "Back to {{ title }}"
+    }
+  },
+  "templates": {
+    "404": {
+      "title": "Page not found",
+      "subtext": "The page you're looking for has moved or doesn't exist."
+    }
+  },
+  "gift_cards": {
+    "issued": {
+      "title": "Here's your {{ value }} gift card for {{ shop }}",
+      "subtext": "Your gift card",
+      "expired": "Expired on {{ expiry }}",
+      "redeem": "Use this code at checkout to redeem your gift card.",
+      "shop_link": "Start shopping",
+      "print": "Print",
+      "add_to_apple_wallet": "Add to Apple Wallet"
+    }
+  }
+}

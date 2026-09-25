@@ -1,0 +1,18 @@
+{
+  "sections": {
+    "main": { "type": "main-cart", "settings": {} },
+    "featured": {
+      "type": "featured-collection",
+      "settings": {
+        "heading": "You may also like",
+        "collection": "",
+        "products_to_show": 4,
+        "columns": "4",
+        "mobile_scroll": true,
+        "show_view_all": false,
+        "color_scheme": "default"
+      }
+    }
+  },
+  "order": ["main", "featured"]
+}
