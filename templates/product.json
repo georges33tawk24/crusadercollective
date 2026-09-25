@@ -3,16 +3,36 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "title": { "type": "title", "settings": { "show_type": true } },
-        "price": { "type": "price", "settings": {} },
-        "variant_picker": { "type": "variant_picker", "settings": { "size_guide_page": "size-guide" } },
-        "buy_buttons": { "type": "buy_buttons", "settings": { "show_dynamic_checkout": true } },
-        "description": { "type": "description", "settings": {} },
+        "title": {
+          "type": "title",
+          "settings": {
+            "show_type": true
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "size_guide_page": "size-guide"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
         "shipping": {
           "type": "collapsible_tab",
           "settings": {
             "heading": "Shipping & exchanges",
-            "content": "",
             "page": "shipping-returns"
           }
         },
@@ -23,15 +43,33 @@
             "content": "<p>Wash cold, inside out. Hang dry. Do not iron directly on the print.</p>"
           }
         },
-        "share": { "type": "share", "settings": {} }
+        "share": {
+          "type": "share",
+          "settings": {}
+        }
       },
-      "block_order": ["title", "price", "variant_picker", "buy_buttons", "description", "shipping", "care", "share"],
+      "block_order": [
+        "title",
+        "price",
+        "variant_picker",
+        "buy_buttons",
+        "description",
+        "shipping",
+        "care",
+        "share"
+      ],
       "settings": {}
     },
     "recommendations": {
       "type": "product-recommendations",
-      "settings": { "heading": "Complete the fit", "products_to_show": 4 }
+      "settings": {
+        "heading": "Complete the fit",
+        "products_to_show": 4
+      }
     }
   },
-  "order": ["main", "recommendations"]
+  "order": [
+    "main",
+    "recommendations"
+  ]
 }

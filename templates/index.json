@@ -11,20 +11,55 @@
         "text": "Heavyweight streetwear in black and white.",
         "button_label": "Shop the drop",
         "button_link": "shopify://collections/all",
-        "button_label_2": "",
         "show_scroll_hint": true
       }
     },
     "categories": {
       "type": "category-grid",
       "blocks": {
-        "hoodies": { "type": "category", "settings": { "collection": "hoodies", "title": "Hoodies" } },
-        "tees": { "type": "category", "settings": { "collection": "t-shirts", "title": "T-Shirts" } },
-        "caps": { "type": "category", "settings": { "collection": "caps", "title": "Caps" } },
-        "hats": { "type": "category", "settings": { "collection": "hats", "title": "Hats" } },
-        "mugs": { "type": "category", "settings": { "collection": "mugs", "title": "Mugs" } }
+        "hoodies": {
+          "type": "category",
+          "settings": {
+            "collection": "hoodies",
+            "title": "Hoodies"
+          }
+        },
+        "tees": {
+          "type": "category",
+          "settings": {
+            "collection": "t-shirts",
+            "title": "T-Shirts"
+          }
+        },
+        "caps": {
+          "type": "category",
+          "settings": {
+            "collection": "caps",
+            "title": "Caps"
+          }
+        },
+        "hats": {
+          "type": "category",
+          "settings": {
+            "collection": "hats",
+            "title": "Hats"
+          }
+        },
+        "mugs": {
+          "type": "category",
+          "settings": {
+            "collection": "mugs",
+            "title": "Mugs"
+          }
+        }
       },
-      "block_order": ["hoodies", "tees", "caps", "hats", "mugs"],
+      "block_order": [
+        "hoodies",
+        "tees",
+        "caps",
+        "hats",
+        "mugs"
+      ],
       "settings": {
         "heading": "Shop by category",
         "link_label": "View all",
@@ -67,12 +102,39 @@
     "highlights": {
       "type": "features",
       "blocks": {
-        "fabric": { "type": "feature", "settings": { "icon": "fabric", "title": "Heavyweight fabrics", "text": "Thick, soft and made to hold their shape." } },
-        "delivery": { "type": "feature", "settings": { "icon": "truck", "title": "Delivery across Lebanon", "text": "Fast shipping to your door." } },
-        "returns": { "type": "feature", "settings": { "icon": "return", "title": "Easy exchanges", "text": "Wrong size? We'll sort it out." } }
+        "fabric": {
+          "type": "feature",
+          "settings": {
+            "icon": "fabric",
+            "title": "Heavyweight fabrics",
+            "text": "Thick, soft and made to hold their shape."
+          }
+        },
+        "delivery": {
+          "type": "feature",
+          "settings": {
+            "icon": "truck",
+            "title": "Delivery across Lebanon",
+            "text": "Fast shipping to your door."
+          }
+        },
+        "returns": {
+          "type": "feature",
+          "settings": {
+            "icon": "return",
+            "title": "Easy exchanges",
+            "text": "Wrong size? We'll sort it out."
+          }
+        }
       },
-      "block_order": ["fabric", "delivery", "returns"],
-      "settings": { "color_scheme": "default" }
+      "block_order": [
+        "fabric",
+        "delivery",
+        "returns"
+      ],
+      "settings": {
+        "color_scheme": "default"
+      }
     },
     "newsletter": {
       "type": "newsletter",
@@ -83,5 +145,13 @@
       }
     }
   },
-  "order": ["hero", "categories", "marquee", "featured", "story", "highlights", "newsletter"]
+  "order": [
+    "hero",
+    "categories",
+    "marquee",
+    "featured",
+    "story",
+    "highlights",
+    "newsletter"
+  ]
 }

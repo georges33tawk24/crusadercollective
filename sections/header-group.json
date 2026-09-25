@@ -7,19 +7,32 @@
       "blocks": {
         "announcement-1": {
           "type": "announcement",
-          "settings": { "text": "New drop is live", "link": "shopify://collections/all" }
+          "settings": {
+            "text": "New drop is live",
+            "link": "shopify://collections/all"
+          }
         },
         "announcement-2": {
           "type": "announcement",
-          "settings": { "text": "Heavyweight fits in black & white", "link": "" }
+          "settings": {
+            "text": "Heavyweight fits in black & white"
+          }
         },
         "announcement-3": {
           "type": "announcement",
-          "settings": { "text": "Delivery all over Lebanon", "link": "" }
+          "settings": {
+            "text": "Delivery all over Lebanon"
+          }
         }
       },
-      "block_order": ["announcement-1", "announcement-2", "announcement-3"],
-      "settings": { "scroll": true }
+      "block_order": [
+        "announcement-1",
+        "announcement-2",
+        "announcement-3"
+      ],
+      "settings": {
+        "scroll": true
+      }
     },
     "header": {
       "type": "header",
@@ -32,5 +45,8 @@
       }
     }
   },
-  "order": ["announcement", "header"]
+  "order": [
+    "announcement",
+    "header"
+  ]
 }

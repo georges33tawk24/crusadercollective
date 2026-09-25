@@ -1,11 +1,13 @@
 {
   "sections": {
-    "main": { "type": "main-404", "settings": {} },
+    "main": {
+      "type": "main-404",
+      "settings": {}
+    },
     "featured": {
       "type": "featured-collection",
       "settings": {
         "heading": "Popular right now",
-        "collection": "",
         "products_to_show": 4,
         "columns": "4",
         "mobile_scroll": true,
@@ -14,5 +16,8 @@
       }
     }
   },
-  "order": ["main", "featured"]
+  "order": [
+    "main",
+    "featured"
+  ]
 }
